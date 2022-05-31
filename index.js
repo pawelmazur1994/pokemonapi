@@ -6,6 +6,7 @@ const authRoute = require('./routes/auth');
 const trainerRoute = require("./routes/trainer");
 const itemRoute = require("./routes/item");
 const pokemonRoute = require("./routes/pokemon");
+const pokedexRoute = require("./routes/pokedex");
 
 
 
@@ -26,6 +27,7 @@ app.use("/api/auth", authRoute);
 app.use("/api/trainers", trainerRoute);
 app.use("/api/items", itemRoute);
 app.use("/api/pokemons", pokemonRoute);
+app.use("/api/pokedexs", pokedexRoute);
 
 
 app.listen(process.env.PORT , ()=>{
