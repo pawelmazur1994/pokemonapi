@@ -43,9 +43,9 @@ router.post("/login", async(req,res)=>{
             process.env.PASSWORD_SECRET
         );
 
-        const password = descryptedPassword.toString(CryptoJS.enc.Utf8)
+        const isCorrrectPassword = descryptedPassword.toString(CryptoJS.enc.Utf8)
 
-        if(password!==req.body.password){
+        if(isCorrrectPassword!==req.body.password){
             res.status(401).json("Wrong password.");
         }
         const jwtToken = jwt.sign({
@@ -57,7 +57,7 @@ router.post("/login", async(req,res)=>{
         );
 
 
-        const {newPassword, ...others}=trainer._doc;
+        const {password, ...others}=trainer._doc;
         res.status(200).json({...others, jwtToken});
 
 
