@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/pawelmazur1994/pokemonapi/issues"
   },
-  "homepage": "https://github.com/pawelmazur1994/pokemonapi#readme"
+  "homepage": "https://github.com/pawelmazur1994/pokemonapi#readme",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jwt-token": "^1.0.9",
+    "mongoose": "^6.3.5",
+    "nodemon": "^2.0.16"
+  }
 }
